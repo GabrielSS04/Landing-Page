@@ -24,14 +24,11 @@ export default function Home() {
 
   useEffect(() => {
     if (showMobileMenu) {
-      document.body.classList.add('no-scroll');
+      document.documentElement.style.overflowY = "hidden";
     } else {
-      document.body.classList.remove('no-scroll');
+      document.documentElement.style.overflowY = "auto";
     }
-
-    return () => {
-    };
-  }, [showMobileMenu]);
+  })
 
   return (
     <>

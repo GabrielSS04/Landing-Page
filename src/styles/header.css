@@ -71,10 +71,6 @@
     font-size: var(--fs-lg);
   }
 
-  .no-scroll {
-    overflow: hidden;
-  }
-
   @media (width >= 1280px) {
     header {
       position: relative;
