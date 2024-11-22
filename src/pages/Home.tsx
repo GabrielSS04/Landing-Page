@@ -281,7 +281,7 @@ export default function Home() {
 
         <section className="even-columns gap-1.5">
 
-          <div className="pricing-card">
+          <div className="pricing-card not-premium">
             <span className="plan">
                 <h3>Básico</h3>
                 <p>Você tem direito a uma prova das comidas DonaFrost.</p>
@@ -328,7 +328,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="pricing-card">
+          <div className="pricing-card not-premium">
             <span className="plan">
                 <h3>Básico</h3>
                 <p>Você tem direito a uma prova das comidas DonaFrost.</p>
