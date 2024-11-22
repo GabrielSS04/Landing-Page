@@ -1,0 +1,130 @@
+:root {
+    /* -COLORS- */
+    --primaryColor: #4df555;
+    --secondaryColor: #b4fc7c;
+    --tercearyColor: #fdffd0;
+    --backgourndColor: #fff;
+    --textColor: #2d4225;
+    --secondTextColor: #737373;
+    --lightGray: #f8f8f8;
+    --lightTextColor: #fff;
+    --lightGreen: #8FFFA3;
+
+    /* -FONTS- */
+    --ff-sans: "Montserrat", system-ui, sans-serif;
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2.25rem;
+
+    /* -PADDING- */
+    --py-sm: 0.875rem;
+    --py-base: 1rem;
+    --py-lg: 1.5rem;
+    --py-xl: 3rem;
+    --px-lg: 1.5rem;
+}
+
+footer {
+    background-color: #6bb979;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-div {
+    background-color: var(--lightGreen);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.recurso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.empresas,
+.funcionalidades,
+.recursos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empresas h2,
+.funcionalidades h2,
+.recursos h2 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+a {
+    text-align: left;
+}
+
+a:hover {
+    color: white;
+    transition-duration: 0.2s;
+}
+
+.final-span {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .footer-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recurso {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .empresas,
+    .funcionalidades,
+    .recursos {
+        align-items: center;
+    }
+
+    .empresas h2,
+    .funcionalidades h2,
+    .recursos h2 {
+        text-align: center;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px;
+    }
+
+    .footer-div {
+        padding: 10px;
+    }
+
+    .recurso {
+        gap: 20px;
+    }
+
+    .final-span {
+        font-size: var(--fs-sm);
+        padding: 10px;
+    }
+}
