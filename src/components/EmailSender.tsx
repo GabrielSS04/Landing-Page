@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const EmailSender: React.FC = () => {
-  const [toMail, setToMail] = useState("");
-  const [content, setContent] = useState("");
+  const [recipient, setToMail] = useState("");
+  const [message, setContent] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
   const [error, setError] = useState("");
 
@@ -15,7 +15,7 @@ const EmailSender: React.FC = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ toMail, content }),
+          body: JSON.stringify({ recipient, message }),
         }
       );
 
@@ -41,7 +41,7 @@ const EmailSender: React.FC = () => {
           Destinatário:
           <input
             type="email"
-            value={toMail}
+            value={recipient}
             onChange={(e) => setToMail(e.target.value)}
             style={{
               marginLeft: "10px",
@@ -57,7 +57,7 @@ const EmailSender: React.FC = () => {
         <label>
           Conteúdo:
           <textarea
-            value={content}
+            value={message}
             onChange={(e) => setContent(e.target.value)}
             style={{
               display: "block",
